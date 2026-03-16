@@ -7,6 +7,9 @@ export default defineConfig(({ mode }) => {
 
   return {
     root: __dirname,
+    devtools: {
+      enabled: IS_DEV,
+    },
     plugins: [
       dts({
         outDir: 'types',
