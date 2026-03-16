@@ -1,0 +1,47 @@
+<script lang="ts" setup>
+import { createDictManager } from '@anyfu/dict-core';
+import { ref } from 'vue';
+
+
+const retryConfig = ref({
+  retry: 2,
+  retryDelay: 200,
+});
+
+async function handleGetDictRetry() {
+  console.log('当前重试配置::', retryConfig.value);
+  const retryDictManager = createDictManager({
+    url: 'https://api.demo.com/api/dict/base',
+    ...retryConfig.value,
+  });
+
+  await retryDictManager.fetchDict('DICT_RETRY');
+}
+</script>
+
+
+<template>
+  <div>
+    <ElForm :model="retryConfig">
+      <ElFormItem label="重试次数">
+        <ElInput-number v-model="retryConfig.retry" :precision="0" :min="0" :max="5" />
+      </ElFormItem>
+      <ElFormItem label="重试间隔时间">
+        <div class="w-96">
+          <ElSlider
+            v-model="retryConfig.retryDelay"
+            :min="100"
+            :max="1000"
+            :step="50"
+            show-stops
+          />
+        </div>
+      </ElFormItem>
+      <ElFormItem>
+        <ElButton type="primary" @click="handleGetDictRetry">
+          获取字典
+        </ElButton>
+      </ElFormItem>
+    </ElForm>
+  </div>
+</template>
