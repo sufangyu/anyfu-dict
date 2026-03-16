@@ -43,10 +43,11 @@ export default defineConfig({
   title: '字典管理器',
   description: '用于字典数据请求合并、缓存、重试、降级、LRU 管理 的高性能工具，适用于后台配置字典、状态枚举、选项列表等场景',
   head: [
-    ['link', { rel: 'icon', href: '/logo.svg' }],
+    ['link', { rel: 'icon', href: '../assets/logo.svg' }],
   ],
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
+    logo: '../assets/logo.svg',
     search: {
       provider: 'local',
     },
