@@ -1,0 +1,25 @@
+{
+  "$schema": "https://raw.githubusercontent.com/streetsidesoftware/cspell/main/cspell.schema.json",
+  "version": "0.2",
+  "imports": [
+    "@cspell/dict-lorem-ipsum/cspell-ext.json"
+  ],
+  "dictionaryDefinitions": [
+    {
+      "name": "project-words",
+      "path": ".cspell/custom-dictionary.txt",
+      "addWords": true
+    }
+  ],
+  "dictionaries": [
+    "lorem-ipsum",
+    "project-words"
+  ],
+  "ignorePaths": [
+    "node_modules",
+    "dist",
+    "types",
+    "*.svg",
+    "pnpm-lock.yaml"
+  ]
+}

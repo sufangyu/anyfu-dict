@@ -8,6 +8,7 @@
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx,.vue",
     "lint:fix": "eslint . --ext .js,.jsx,.ts,.tsx,.vue --fix",
     "inspect:eslint": "pnpm exec eslint-config-inspector",
+    "cspell": "cspell lint .",
     "changeset": "changeset",
     "changeset:version": "changeset version"
   },
@@ -17,9 +18,11 @@
   "devDependencies": {
     "@antfu/eslint-config": "^7.2.0",
     "@changesets/cli": "^2.30.0",
+    "@cspell/dict-lorem-ipsum": "^4.0.5",
     "@eslint/config-inspector": "^1.4.2",
     "@types/node": "^24.10.1",
     "@vitejs/devtools": "^0.1.0",
+    "cspell": "^9.7.0",
     "eslint": "^9.39.1",
     "eslint-plugin-check-file": "^3.3.1",
     "tsx": "^4.21.0",

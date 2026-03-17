@@ -12,7 +12,7 @@ export function notifyDictDevtoolsUpdate() {
 export function registerDictDevtools(app: App) {
   setupDevtoolsPlugin(
     {
-      id: 'nullfu-dict',
+      id: 'anyfu-dict',
       label: 'Dict',
       packageName: 'dict-vue',
       homepage: 'https://github.com/sufangyu/nullfu-dict',

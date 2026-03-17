@@ -20,7 +20,7 @@ const dictListDefault: DictItemDefault[] = [
 const dictNameDefault = computed(() => {
   return getDictLabel('102', dictListDefault);
 });
-const dictNameDefaultUnfinde = computed(() => {
+const dictNameDefaultUndefined = computed(() => {
   return getDictLabel('104', dictListDefault);
 });
 const dictNameDefaultEmpty = computed(() => {
@@ -42,7 +42,7 @@ const dictNameCustom = computed(() => {
     valueKey: 'dictCode',
   });
 });
-const dictNameCustomUnfinde = computed(() => {
+const dictNameCustomUndefined = computed(() => {
   return getDictLabel<DictItem>('104', dictListCustom, {
     labelKey: 'dictName',
     valueKey: 'dictCode',
@@ -57,7 +57,7 @@ const dictNameCustomUnfinde = computed(() => {
       默认数据类型: {{ dictNameDefault }}
     </p>
     <p class="my-1!">
-      匹配不上数据: {{ dictNameDefaultUnfinde }}
+      匹配不上数据: {{ dictNameDefaultUndefined }}
     </p>
     <p class="my-1!">
       空数据占位符: {{ dictNameDefaultEmpty }}
