@@ -19,10 +19,10 @@ await getDictFirst();
 // 2. 异步请求 & 在合并请求窗口内的延迟请求, 会被合并
 getDictStyles();
 getDictReason();
-setTimeout(() => getDictMulti(), 10);
+setTimeout(getDictMulti, 10);
 
 // 3. 在合并请求窗口外的延迟请求, 会单独一个请求
-setTimeout(() => getDictAlone(), 1250);
+setTimeout(getDictAlone, 1250);
 ```
 
 <demo vue="./demo-code/merge-request/demo-01.vue"/>

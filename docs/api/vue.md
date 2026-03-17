@@ -2,7 +2,7 @@
 
 Vue Hooks API 介绍。
 
-### API
+## API
 
 ### `setupDictPlugin<T extends MultiDictOptions>(options: T, canUseDevtools?: boolean)`
 

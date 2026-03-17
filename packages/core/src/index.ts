@@ -221,7 +221,7 @@ export function createDictManager<
 
   function _scheduleMerge() {
     if (!mergeTimer) {
-      mergeTimer = setTimeout(() => _mergeRequest(), mergeDelay);
+      mergeTimer = setTimeout(_mergeRequest, mergeDelay);
     }
   }
 

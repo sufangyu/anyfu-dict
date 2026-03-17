@@ -124,6 +124,7 @@ export class HTTPError extends Error {
  * @description 满足条件只有以`https://`, `http://`, `//` 开头的字符串
  */
 export function isAbsoluteUrl(url: string) {
+  // eslint-disable-next-line e18e/prefer-static-regex
   const absoluteUrlReg = /^(?:[a-z]+:)?\/\//i;
   return absoluteUrlReg.test(url);
 }

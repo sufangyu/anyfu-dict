@@ -3,7 +3,6 @@ import type { DefaultTheme } from 'vitepress';
 // import vueJsx from '@vitejs/plugin-vue-jsx';
 // 参考: https://note.weizwz.com/vitepress/basic/tailwind
 import tailwindcss from '@tailwindcss/vite';
-import { viteMockServe } from 'vite-plugin-mock';
 import { defineConfig } from 'vitepress';
 import { vitepressDemoPlugin } from 'vitepress-demo-plugin';
 import { groupIconMdPlugin, groupIconVitePlugin } from 'vitepress-plugin-group-icons';
@@ -28,9 +27,6 @@ export default defineConfig({
     plugins: [
       groupIconVitePlugin(),
       tailwindcss(),
-      viteMockServe({
-        mockPath: '.mock',
-      }),
     ],
     ssr: {
       noExternal: [
